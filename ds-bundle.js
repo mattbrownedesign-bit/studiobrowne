@@ -1711,7 +1711,8 @@ function SBContactPanel({
   const [sent, setSent] = React.useState(false);
   return /*#__PURE__*/React.createElement(window.SBPanel, {
     bg: "camel",
-    minh: "100vh"
+    minh: "auto",
+    pad: "clamp(3rem,6vw,4.5rem) clamp(1.5rem,6vw,4rem)"
   }, /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex",
@@ -2799,7 +2800,7 @@ function SBProject({
       padding: "0 clamp(1.5rem,4vw,4rem)"
     }
   }, /*#__PURE__*/React.createElement(Polaroid, {
-    image: window.SB_ASSET + "/images/project-bar-lounge.webp",
+    image: window.SB_ASSET + "/images/project-bar-lounge.png",
     slotId: "proj-" + p.id + "-hero",
     ratio: "4 / 3",
     width: "min(1040px, 92vw)",
@@ -2871,13 +2872,13 @@ function SBProject({
     },
     className: "sb-proj-meta sb-pad-x"
   }, /*#__PURE__*/React.createElement(Polaroid, {
-    image: window.SB_ASSET + "/images/project-dining.webp",
+    image: window.SB_ASSET + "/images/project-dining.png",
     slotId: "proj-" + p.id + "-g1",
     ratio: "4 / 5",
     width: "100%",
     bare: true
   }), /*#__PURE__*/React.createElement(Polaroid, {
-    image: window.SB_ASSET + "/images/project-living.webp",
+    image: window.SB_ASSET + "/images/project-living.png",
     slotId: "proj-" + p.id + "-g2",
     ratio: "4 / 5",
     width: "100%",
@@ -2967,16 +2968,11 @@ function SBStudio({
   } = window.StudioBrowneDesignSystem_6dac50;
   const exp = [["Studio Browne", "Principal · Beverly Hills", "2026—Present"], ["Sarah West Interiors", "Designer III · West Hollywood", "2022—Present"], ["Alexander Design Build", "Interior Designer · Los Angeles", "2022"], ["Adair Design Group", "Interior Designer · San Francisco", "2014—2018"]];
   const skills = ["AI for Design", "Residential & Commercial", "Custom Millwork", "2D & 3D Modeling", "Photorealistic Rendering", "Space Planning", "Feng Shui", "Art Direction & Styling", "Lighting Design & FF&E", "Color Application"];
-  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(window.SBPanel, {
-    bg: "greige",
-    minh: "60vh"
-  }, /*#__PURE__*/React.createElement(window.SBStatement, {
-    maxw: "40ch"
-  }, "Studio Browne is led by Matt Browne \u2014 interior designer & digital artist \u2014 pairing hands-on craft with a photographer's eye and an early command of AI-assisted photorealistic rendering.")), /*#__PURE__*/React.createElement("div", {
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "sb-pad-x",
     style: {
       background: "var(--panel-greige)",
-      padding: "0 clamp(2rem,10vw,10rem) clamp(5rem,9vw,8rem)"
+      padding: "0 clamp(1.25rem,5vw,4.5rem) calc(clamp(5rem,9vw,8rem) + clamp(260px,26vw,340px) * 0.7)"
     }
   }, /*#__PURE__*/React.createElement("p", {
     style: {
@@ -2987,12 +2983,30 @@ function SBStudio({
       letterSpacing: "0.14em",
       textTransform: "uppercase",
       color: "var(--text-secondary)",
-      maxWidth: "78ch",
+      maxWidth: 1100,
       margin: "0 auto",
       textWrap: "pretty"
     }
-  }, "Based in Beverly Hills, Studio Browne operates with a quiet directive gone loud: create spaces that have something to say \u2014 and stop apologizing for saying it. We are drawn to the overlooked \u2014 the bridge between high-end modernism and the lived-in warmth of the past \u2014 and openly bored by the rest: the repeated palettes, the safe beige consensus, the same ten ideas passed around a stale industry like a house style. We didn't start a studio to join that conversation. Every project, from heritage restorations to ground-up architectural builds, is treated as a cohesive narrative. It isn't about filling rooms; it is about tuning them. Material honesty, spatial harmony, and the nerve to strip away everything that's only there because it's expected. Our inspiration comes from the periphery \u2014 the rhythm of a song, the prose of a favorite book, the raw texture of unlacquered brass \u2014 never from a catalog, a trend report, or somebody else's mood board. The work is curated, deeply personal, and a little defiant. The result is timelessness with a pulse: composed California luxury that refuses to behave.")), /*#__PURE__*/React.createElement(window.SBPanel, {
-    bg: "oxblood"
+  }, "I created Studio Browne to create spaces that have something to say. I am drawn to the overlooked and am a fan of the bridge between high-end modernism and the lived-in look of the past. I am bored with the repeated palettes, the safe beige consensus, the same ten ideas passed around by a stale industry. I didn't start a studio to join that conversation. Every project, from heritage restorations to ground-up architectural builds, is treated as a cohesive narrative. I approach my work looking at the total picture; there needs to be a cohesive narrative. It isn't about filling rooms; it is about tuning them. Material honesty and spatial harmony, and get rid of everything that's only there because it's expected. My inspiration comes in many forms \u2014 the rhythm of a song, the prose of a favorite book, the raw texture of unlacquered brass. Many forms, but never from a catalog, a trend report, or somebody else's mood board. The work I do is curated, deeply personal, and a little defiant."), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontFamily: "var(--font-sans)",
+      fontWeight: 400,
+      fontSize: "clamp(0.72rem,0.95vw,0.88rem)",
+      lineHeight: 2,
+      letterSpacing: "0.14em",
+      textTransform: "uppercase",
+      color: "var(--text-secondary)",
+      maxWidth: 1100,
+      margin: "2.2em auto 0",
+      textWrap: "pretty"
+    }
+  }, "Let's live,", /*#__PURE__*/React.createElement("br", null), "Matt")), /*#__PURE__*/React.createElement(window.SBPanel, {
+    bg: "oxblood",
+    minh: "auto",
+    pad: "clamp(3.5rem,6vw,5.5rem) clamp(5rem,10vw,10rem)",
+    style: {
+      overflow: "visible"
+    }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex",
@@ -3004,17 +3018,41 @@ function SBStudio({
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
-      fontFamily: "var(--font-title)",
-      fontSize: "1.25rem",
-      color: "var(--text-on-dark)"
+      position: "relative",
+      width: "clamp(260px,26vw,340px)",
+      marginTop: "calc(-1 * clamp(3.5rem,6vw,5.5rem) - 14px - clamp(260px,26vw,340px) * 0.625)"
     }
-  }, "The Principal"), /*#__PURE__*/React.createElement(Polaroid, {
+  }, /*#__PURE__*/React.createElement(Polaroid, {
     image: window.SB_ASSET + "/founder-headshot.webp",
     ratio: "4 / 5",
-    width: "clamp(260px,26vw,340px)",
-    tilt: -1.5,
-    caption: "Matt Browne"
-  }), /*#__PURE__*/React.createElement("p", {
+    width: "100%",
+    tilt: 0
+  }), /*#__PURE__*/React.createElement("div", {
+    "aria-hidden": "true",
+    style: {
+      "position": "absolute",
+      "right": "2%",
+      "bottom": "2%",
+      "fontFamily": "var(--font-hand)",
+      "fontWeight": 700,
+      "fontSize": "clamp(1.4rem, 1.9vw, 2.1rem)",
+      "lineHeight": 1,
+      "color": "#1a1613",
+      "transform": "rotate(-8deg)",
+      "textTransform": "none",
+      "letterSpacing": "normal",
+      "whiteSpace": "nowrap",
+      "pointerEvents": "none",
+      "textShadow": "0.5px 0.5px 0 #1a1613"
+    }
+  }, "xx,\xA0 Matt Browne")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: "var(--font-title)",
+      fontSize: "1.25rem",
+      color: "var(--text-on-dark)",
+      whiteSpace: "nowrap"
+    }
+  }, "The Principal"), /*#__PURE__*/React.createElement("p", {
     style: {
       fontFamily: "var(--font-sans)",
       fontSize: "0.9rem",
@@ -3023,88 +3061,7 @@ function SBStudio({
       margin: 0,
       maxWidth: "48ch"
     }
-  }, "Working between Beverly Hills and the Bay Area on high-end residential rebuilds \u2014 from sourcing and custom furniture to on-site styling \u2014 with a practice built on restraint, warmth and honest materials."))), /*#__PURE__*/React.createElement("div", {
-    className: "sb-pad-x",
-    style: {
-      background: "var(--panel-greige)",
-      padding: "clamp(5rem,9vw,8rem) clamp(5rem,10vw,10rem)"
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      maxWidth: 900,
-      margin: "0 auto",
-      display: "grid",
-      gridTemplateColumns: "1fr 1fr",
-      gap: "clamp(2rem,5vw,5rem)"
-    },
-    className: "sb-studio-split",
-    "data-tone": "ink"
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontFamily: "var(--font-sans)",
-      fontSize: "0.72rem",
-      letterSpacing: "0.2em",
-      textTransform: "uppercase",
-      color: "var(--text-primary)",
-      marginBottom: "1.6rem"
-    }
-  }, "Experience"), exp.map(([firm, role, yr]) => /*#__PURE__*/React.createElement("div", {
-    key: firm,
-    style: {
-      padding: "1.1rem 0",
-      borderBottom: "1px solid var(--line)"
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontFamily: "var(--font-title)",
-      fontSize: "1.1rem",
-      color: "var(--text-primary)"
-    }
-  }, firm), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: "flex",
-      justifyContent: "space-between",
-      gap: "1rem",
-      marginTop: "0.2rem",
-      fontFamily: "var(--font-sans)",
-      fontSize: "0.9rem",
-      color: "var(--text-muted)"
-    }
-  }, /*#__PURE__*/React.createElement("span", null, role), /*#__PURE__*/React.createElement("span", null, yr))))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontFamily: "var(--font-sans)",
-      fontSize: "0.72rem",
-      letterSpacing: "0.2em",
-      textTransform: "uppercase",
-      color: "var(--text-primary)",
-      marginBottom: "1.6rem"
-    }
-  }, "Capabilities"), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: "flex",
-      flexWrap: "wrap",
-      gap: "0.6rem"
-    }
-  }, skills.map(s => /*#__PURE__*/React.createElement("span", {
-    key: s,
-    style: {
-      fontFamily: "var(--font-sans)",
-      fontSize: "0.82rem",
-      letterSpacing: "0.04em",
-      color: "var(--text-secondary)",
-      border: "1px solid var(--line)",
-      borderRadius: "var(--radius-pill)",
-      padding: "0.5rem 0.9rem"
-    }
-  }, s))), /*#__PURE__*/React.createElement("div", {
-    style: {
-      marginTop: "2.4rem"
-    }
-  }, /*#__PURE__*/React.createElement(Button, {
-    variant: "primary",
-    size: "lg",
-    onClick: () => onNavigate("contact")
-  }, "Work with the studio"))))), /*#__PURE__*/React.createElement(window.SBContactPanel, {
+  }, "Working between Beverly Hills and the Bay Area on high-end residential rebuilds \u2014 from sourcing and custom furniture to on-site styling \u2014 with a practice built on restraint, warmth and honest materials."))), /*#__PURE__*/React.createElement(window.SBContactPanel, {
     onNavigate: onNavigate
   }));
 }

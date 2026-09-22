@@ -7,12 +7,12 @@
    ============================================================ */
 
 :root {
-  --font-display: "Jost", "Futura", "Century Gothic", sans-serif;   /* wordmark only */
-  --font-title:   "Manofa", "Jost", sans-serif;                     /* Manofa Condensed — headings/titles */
+  --font-display: "Manofa", "Futura", "Century Gothic", sans-serif; /* wordmark only */
+  --font-title:   "Manofa", "Futura", sans-serif;                   /* Manofa Condensed — headings/titles */
   --font-serif:   "Sorts Mill Goudy", "Goudy Old Style", Georgia, serif; /* editorial serif */
   --font-sans:    "Mulish", "Helvetica Neue", system-ui, sans-serif; /* body sans */
-  --font-hand:    "Homer", "Caveat", "Segoe Script", cursive;        /* handwritten marker accents */
-  --font-manofa:  "Manofa", "Jost", sans-serif;                     /* original house display — still available */
+  --font-hand:    "Sorts Mill Goudy", "Goudy Old Style", Georgia, serif; /* signature accents — italic serif */
+  --font-manofa:  "Manofa", "Futura", sans-serif;                   /* alias of --font-title */
 
   /* Type scale (fluid-friendly base = 16px) */
   --fs-display:   clamp(3.5rem, 8vw, 7rem); /* @kind font */

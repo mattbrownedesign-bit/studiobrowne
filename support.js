@@ -1,3 +1,8 @@
+/* Local copy: React is served from ./lib instead of unpkg so the site works offline. */
+window.__resources = Object.assign({
+  "https://unpkg.com/react@18.3.1/umd/react.production.min.js": "lib/react.production.min.js",
+  "https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js": "lib/react-dom.production.min.js"
+}, window.__resources || {});
 // GENERATED from dc-runtime/src/*.ts — do not edit. Rebuild with `cd dc-runtime && bun run build`.
 "use strict";
 (() => {
